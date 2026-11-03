@@ -88,8 +88,6 @@ Delete:
 
 `BepInEx/plugins/OnlyFence`
 
-No server-side files need to be removed.
-
 ## Compatibility
 
 Tested with **SPT 4.1.6**.
