@@ -6,14 +6,16 @@ Only Fence allows you to customize which traders appear in the Escape from Tarko
 
 Hide vanilla traders, modded traders, or both — while keeping **Fence** visible at all times.
 
+Why? Because now you can.
+
 ## Features
 
-- Hide vanilla EFT traders except Fence.
-- Optionally hide custom traders added by other mods.
+- Hide ALL vanilla EFT traders except Fence.
+- Optionally hide ALL custom traders added by other mods.
 - Configure trader visibility through the BepInEx F12 menu.
 - Optional debug logging for troubleshooting.
 - Fully client-side — no server mod required.
-- No WTT CommonLib dependency.
+- No dependencies.
 
 ## Requirements
 
@@ -41,7 +43,7 @@ Open the BepInEx F12 menu and find **Only Fence Client**.
 |---|---|---|
 | Hide default traders | ON | Hides vanilla EFT traders except Fence |
 | Hide modded traders | OFF | Hides traders added by other mods |
-| Enable debug logging | OFF | Enables detailed UI diagnostics |
+| Enable debug logging | OFF | Enables detailed diagnostics that is saved in LogOutput.log |
 
 **Fence always remains visible**, regardless of configuration.
 
@@ -65,7 +67,7 @@ If you encounter a problem:
 
 Debug logging is disabled by default.
 
-Please review logs for personal information before sharing them publicly.
+Please review logs for personal information before stating an issue.
 
 ## Building from Source
 
@@ -94,7 +96,8 @@ Tested with **SPT 4.1.6**.
 
 Compatibility with other SPT versions is not guaranteed.
 
-## Disclaimer
-
-Only Fence is an unofficial community modification and is not affiliated with Battlestate Games or the SPT development team.
+**Author:** Klide  
+**Version:** 1.0.12  
+**SPT Version:** 4.1.6  
+**License:** MIT
 
