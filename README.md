@@ -25,10 +25,9 @@ No additional mods are required.
 ## Installation
 
 1. Download the latest Release ZIP from GitHub Releases.
-2. Close Escape from Tarkov.
-3. Extract the archive into your SPT installation directory.
-4. Start the game.
-5. Press **F12** to configure Only Fence.
+2. Extract the archive into your SPT installation directory.
+3. Start the game.
+4. Press **F12** to configure Only Fence.
 
 The installed DLL should be located at:
 
