@@ -1,101 +1,65 @@
-﻿# Only Fence
+# ONLY FENCE
 
-**A lightweight client-side trader visibility mod for SPT 4.1.6.**
+Keep Fence. Hide the rest.
 
-Only Fence allows you to customize which traders appear in the Escape from Tarkov trading interface.
+A small client-side mod that lets you decide which traders appear in the Escape from Tarkov trading screen. Hide the original traders, traders added by mods, or both. **Fence stays visible.**
 
-Hide vanilla traders, modded traders, or both — while keeping **Fence** visible at all times.
+For **SPT 4.1.6**. Client only.
 
-Why? Because now you can.
+## What it does
 
-## Features
+- **Fence stays.** The trader list is filtered without removing Fence, even when both hiding options are enabled.
+- **Hide the originals.** Turn off the standard EFT traders and leave Fence on the screen.
+- **Hide modded traders too, if you like.** A separate option hides traders whose IDs are not in the mod's list of original EFT traders.
+- **Change it in F12.** No file editing or server restart needed to change the visibility settings. If the trading screen is already open, reopen it if the cards do not refresh cleanly.
 
-- Hide ALL vanilla EFT traders except Fence.
-- Optionally hide ALL custom traders added by other mods.
-- Configure trader visibility through the BepInEx F12 menu.
-- Optional debug logging for troubleshooting.
-- Fully client-side — no server mod required.
-- No dependencies.
+## Settings (F12)
 
-## Requirements
+Find **Only Fence Client** in the BepInEx configuration menu.
 
-- **SPT 4.1.6**
-- BepInEx and Harmony (included in the supported SPT environment)
+- **Hide default traders** — On by default. Hides original EFT traders except Fence.
+- **Hide modded traders** — Off by default. Hides traders not recognized as original EFT traders by the mod.
+- **Enable debug logging** — Off by default. Writes detailed UI diagnostics when either trader visibility setting changes.
 
-No additional mods are required.
+Fence is always exempt from both hiding options.
 
 ## Installation
 
-1. Download the latest Release ZIP from GitHub Releases.
-2. Extract the archive into your SPT installation directory.
-3. Start the game.
-4. Press **F12** to configure Only Fence.
+1. Download the release ZIP from [GitHub Releases](https://github.com/Klidevich/OnlyFence/releases).
+2. Extract it into your SPT installation folder.
+3. Start the game. Press **F12** to configure Only Fence.
 
-The installed DLL should be located at:
+The installed file should be at:
 
-`BepInEx/plugins/OnlyFence/OnlyFenceClient.dll`
+```text
+BepInEx/plugins/OnlyFence/OnlyFenceClient.dll
+```
 
-## Configuration
+## Known issue
 
-Open the BepInEx F12 menu and find **Only Fence Client**.
-
-| Setting | Default | Description |
-|---|---|---|
-| Hide default traders | ON | Hides vanilla EFT traders except Fence |
-| Hide modded traders | OFF | Hides traders added by other mods |
-| Enable debug logging | OFF | Enables detailed diagnostics that is saved in LogOutput.log |
-
-**Fence always remains visible**, regardless of configuration.
-
-## Known Issues
-
-Changing trader visibility while the trading screen is open may leave empty or dark trader card slots.
-
-If this happens, close and reopen the trading screen.
+Changing visibility while the trading screen is open can leave dark or empty trader card slots. **Close and reopen the trading screen** to refresh the layout.
 
 ## Troubleshooting
 
-If you encounter a problem:
+Enable **F12 > Only Fence Client > Enable debug logging**, then change either visibility option to trigger a diagnostic dump. Check `BepInEx/LogOutput.log` and include the relevant lines in your issue report. Review logs for personal information before sharing them.
 
-1. Press F12.
-2. Enable **Enable debug logging**.
-3. Change one of the trader visibility settings to trigger diagnostic logging.
-4. Reproduce the issue.
-5. Close the game.
-6. Locate `BepInEx/LogOutput.log`.
-7. Attach the relevant log when reporting the issue.
+## Build
 
-Debug logging is disabled by default.
-
-Please review logs for personal information before stating an issue.
-
-## Building from Source
-
-Only Fence is written in C# using BepInEx, Harmony and .NET Standard 2.1.
-
-Build with:
+Only Fence is written in C# with BepInEx and Harmony, targeting .NET Standard 2.1. Build against your own **SPT 4.1.6** installation:
 
 ```powershell
 dotnet build Client/OnlyFenceClient.csproj -c Release -p:SPT_PATH="C:\Path\To\SPT"
 ```
 
-The project may reference assemblies from a local SPT installation.
-Update the paths in the .csproj file if necessary.
+The compiled DLL is written to `Client/bin/Release/netstandard2.1/OnlyFenceClient.dll`.
 
-## Uninstallation
+## Uninstall
 
-Delete:
-
-`BepInEx/plugins/OnlyFence`
+Delete `BepInEx/plugins/OnlyFence` from your SPT installation.
 
 ## Compatibility
 
-Tested with **SPT 4.1.6**.
+Built and tested for **SPT 4.1.6**. Compatibility with other SPT versions is not guaranteed.
 
-Compatibility with other SPT versions is not guaranteed.
-
-**Author:** Klide  
-**Version:** 1.0.12  
-**SPT Version:** 4.1.6  
-**License:** MIT
-
+**Author:** Klide, ChatGPT  
+**Version:** 1.0.12
