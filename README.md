@@ -61,8 +61,6 @@ Delete `BepInEx/plugins/OnlyFence` from your SPT installation.
 
 Built and tested for **SPT 4.1.6**. Compatibility with other SPT versions is not guaranteed.
 
-**Author:** Klide, ChatGPT  
-**Version:** 1.0.12
 
 ## Credits
 
