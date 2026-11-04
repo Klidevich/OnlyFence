@@ -63,3 +63,10 @@ Built and tested for **SPT 4.1.6**. Compatibility with other SPT versions is not
 
 **Author:** Klide, ChatGPT  
 **Version:** 1.0.12
+
+## Credits
+
+- **Klide** — Creator, developer and maintainer.
+- **ChatGPT (OpenAI)** — AI-assisted development, debugging, code review and documentation.
+
+Developed by Klide with assistance from ChatGPT.
